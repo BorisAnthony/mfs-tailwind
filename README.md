@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://modernfontstacks.com/">
-    <img src="img/logo-mfs.svg" width="128" height="128" alt="Modern Font Stacks">
+    <img src="https://raw.githubusercontent.com/system-fonts/modern-font-stacks/main/img/logo-mfs.svg" width="128" height="128" alt="Modern Font Stacks">
   </a>
   <br>for<br>
   <a href="https://tailwindcss.com" target="_blank">
@@ -13,7 +13,7 @@
 </p>
 
 <h1 align="center">mfs-tailwind</h1>
-<h2>The "<a href="https://github.com/system-fonts/modern-font-stacks">Modern Font Stacks</a>" as `theme:{fontFamily}` directives for TailwindCSS config</h2>
+The "<a href="https://github.com/system-fonts/modern-font-stacks">Modern Font Stacks</a>" as `theme:{fontFamily}` directives for TailwindCSS config.
 
 ---
 
@@ -22,6 +22,9 @@
 Add any or all of the following to the `theme` section of your `tailwind.config.js` file:
 
 ```js
+module.exports = {
+  corePlugins: {},
+  content: [],
   theme: {
     fontFamily: { // https://github.com/system-fonts/modern-font-stacks
       systemui:     ['system-ui', 'sans-serif'],
@@ -41,14 +44,17 @@ Add any or all of the following to the `theme` section of your `tailwind.config.
       handwritten:  ['Segoe Print', 'Bradley Hand', 'Chilanka', 'TSCu_Comic', 'casual', 'cursive'],
     },
     extend: {},
-  },
+  }
+}
 ```
 
 ## Usage
 
 ```html
+<div class="font-systemui"></div>
+<div class="font-transitional"></div>
 <div class="font-oldstyle"></div>
 <div class="font-neogrote"></div>
-…
+etc…
 ```
 ---
