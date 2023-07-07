@@ -15,6 +15,12 @@
 <h1 align="center">mfs-tailwind</h1>
 The "<a href="https://github.com/system-fonts/modern-font-stacks">Modern Font Stacks</a>" as `theme:{fontFamily}` directives for TailwindCSS config.
 
+The stacks originate from the [Modern Font Stacks](https://modernfontstacks.com), a passion project of [Dan Klammer](https://danklammer.com).
+See the [repository of the project](https://github.com/system-fonts/modern-font-stacks) to preview the stacks.
+
+**Wordpress users**
+See [LittleBigThing for a Wordpress plugin](https://github.com/LittleBigThing/Modern-Font-Stacks-for-WP).
+
 ---
 
 ## Installation
@@ -64,7 +70,8 @@ etc…
 
 On July 6th, 2023, TailwindCSS [showcased](https://youtu.be/CLkxRnRQtDE?t=3339) some ideas about future configuration methods and syntax by which, instead of adding fonts to a "theme" object in the "tailwind.config.js" file, we can add them directly to the source CSS file, using a `:theme` selector and standard CSS variable declarations.
 
-**DO NOT TRY THIS YET. It is not yet implemented in TailwindCSS, and will not work. This is just a preview of what's to come.**
+**DO NOT TRY THIS YET.**
+**It is not yet implemented in TailwindCSS, and will not work. This is just a preview of what's to come.**
 
 ```css
 :theme {
