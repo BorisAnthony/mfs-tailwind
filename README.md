@@ -25,6 +25,33 @@ See [LittleBigThing for a Wordpress plugin](https://github.com/LittleBigThing/Mo
 
 ## Installation
 
+### TailwindCSS ^4.0
+
+As of TailwindCS 4.0, the `tailwind.config.js` file is no longer needed ( _though it will still work that way too_ ).
+Simply add any of these we need to your base CSS file.
+
+```css
+@theme {
+  --font-systemui:     system-ui, sans-serif;
+  --font-transitional: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+  --font-oldstyle:     'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+  --font-humanist:     Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+  --font-geohumanist:  Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+  --font-classhuman:   Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+  --font-neogrote:     Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+  --font-monoslab:     'Nimbus Mono PS', 'Courier New', monospace;
+  --font-monocode:     ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  --font-industrial:   Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+  --font-roundsans:    ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+  --font-slabserif:    Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif;
+  --font-antique:      Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif;
+  --font-didone:       Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
+  --font-handwritten:  'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive;
+}
+```
+
+### TailwindCSS ^3.0
+
 Add any or all of the following to the `theme` section of your `tailwind.config.js` file:
 
 ```js
@@ -54,6 +81,8 @@ module.exports = {
 }
 ```
 
+---
+
 ## Usage
 
 ```html
@@ -64,31 +93,3 @@ module.exports = {
 etc…
 ```
 
----
-
-## TailwindCSS "Oxyde" — *Unreleased*
-
-On July 6th, 2023, TailwindCSS [showcased](https://youtu.be/CLkxRnRQtDE?t=3339) some ideas about future configuration methods and syntax by which, instead of adding fonts to a "theme" object in the "tailwind.config.js" file, we can add them directly to the source CSS file, using a `:theme` selector and standard CSS variable declarations.
-
-**DO NOT TRY THIS YET.**
-**It is not yet implemented in TailwindCSS, and will not work. This is just a preview of what's to come.**
-
-```css
-:theme {
-  --font-family-systemui:     system-ui, sans-serif;
-  --font-family-transitional: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-  --font-family-oldstyle:     'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
-  --font-family-humanist:     Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
-  --font-family-geohumanist:  Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
-  --font-family-classhuman:   Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
-  --font-family-neogrote:     Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-  --font-family-monoslab:     'Nimbus Mono PS', 'Courier New', monospace;
-  --font-family-monocode:     ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-  --font-family-industrial:   Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
-  --font-family-roundsans:    ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
-  --font-family-slabserif:    Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif;
-  --font-family-antique:      Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif;
-  --font-family-didone:       Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
-  --font-family-handwritten:  'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive;
-}
-```
